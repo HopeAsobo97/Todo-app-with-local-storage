@@ -1,0 +1,105 @@
+.TodoWrapper{
+  min-width: 400px;
+  min-height: 300px;
+  border: 1px solid #fff;
+  background: rgb(14, 23, 38);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  margin: 100px 600px 100px;
+}
+
+.todo-btn{
+  color: #fff;
+  background: cornflowerblue;
+  cursor: pointer;
+  padding: 2px 5px;
+  text-align: center;
+  border: 1px solid #fff;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.edit-todo-btn{
+  color: #fff;
+  background: cornflowerblue;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #fff;
+  height: 30px;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.icon{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+body{
+  background-color: cornflowerblue;
+  font-family: 'Poppins',sans-serif;
+  color: #fff;
+}
+
+.TodoForm{
+  color: #fff;
+  font-weight: bold;
+}
+
+.TodoForm input{
+  flex: 1;
+  width: 247px;
+  border-radius: 2px;
+  margin: 10px 0;
+  height: 30px;
+  font-weight: bold;
+  padding: 2px 5px;
+  background: rgb(14, 23, 38);
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.EditTodoForm input{
+  flex: 1;
+  width: 285px;
+  border-radius: 2px;
+  margin: 10px 0;
+  height: 30px;
+  font-weight: bold;
+  background: rgb(14, 23, 38);
+  outline: none;
+  box-shadow: none;
+  padding: 2px 5px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
+.Todo{
+  background: cornflowerblue;
+  color: #fff;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: pointer;
+  width: 319px;
+  margin: 10px 0;
+  height: 30px;
+  border-radius: 2px;
+}
