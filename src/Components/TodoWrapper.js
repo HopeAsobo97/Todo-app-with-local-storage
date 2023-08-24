@@ -1,11 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import React from 'react'
 import { TodoForm } from './TodoForm'
 import { Todo } from './Todo'
 import { EditTodoForm } from './EditTodoForm'
 
+const getItems = () => {
+    let Tasks = localStorage.getItem('Tasks')
+    console.log(Tasks)
+
+    if(Tasks) {
+        return JSON.parse(localStorage.getItem('Tasks'))
+    } else {
+        return []
+    }
+}
+
 export const TodoWrapper = () => {
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState(getItems())
 
     const addTodo = todo => 
     {
@@ -39,6 +50,10 @@ export const TodoWrapper = () => {
     const updateTask = (task,id) => {
         setTodos(prevTodos => prevTodos.map(todo => todo.id === id ? {...todo, task, isEditing: !todo.isEditing} : todo))
     }
+
+    useEffect(() =>{
+        localStorage.setItem('Tasks',JSON.stringify(todos))
+    },[todos])
 
   return (
     <div className='TodoWrapper'>
